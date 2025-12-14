@@ -20,8 +20,9 @@ try:
         myDataBase.commit()
 
     print("DataBase 'alx_book_store' created successfully")
-except mysql.connection.Error as e:
-    print(f"Error while connecting to MySQL: {e}")
+
+except mysql.connection.Error:
+    print(f"Error while connecting to MySQL: ".format(Error))
 
 
 finally:
