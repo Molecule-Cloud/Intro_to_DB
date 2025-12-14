@@ -23,17 +23,16 @@ CREATE TABLE Customers(
 )
 
 CREATE TABLE Orders(
-    INT order_id PRIMARY KEY,
-    INT customer_id,
-    DATE order_date,
+    order_id INT customer_id,
+    order_date DATE,
     FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
 )
 
 CREATE TABLE Order_Details(
-    INT orderdetailid PRIMARY KEY,
-    INT order_id,
-    INT book_id,
-    DOUBLE quantity,
+    orderdetailid INT  PRIMARY KEY,
+    order_id INT,
+    book_id INT,
+    quantity DOUBLE,
     FOREIGN KEY (order_id) REFERENCES orders(order_id),
     FOREIGN KEY (book_id) REFERENCES books(book_id)
 )
