@@ -1,12 +1,5 @@
-import mysql.connector
-
-myDataBase = mysql.connector.connect(
-    host: "localhost",
-    user = "root",
-    password = "screamingto1",
-    database = "alx_book_store"
-)
-
+CREATE DATABASE alx_book_store IF NOT EXISTS;
+USE alx_book_store;
 
 CREATE TABLE Books(
     book_id INT PRIMARY KEY,
