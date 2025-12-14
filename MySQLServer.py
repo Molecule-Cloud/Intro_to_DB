@@ -2,7 +2,7 @@ import mysql.connector
 from mysql.connector import Error
 
 
-cleatry:
+try:
     myDataBase = mysql.connector.connect(
         host = "localhost",
         user = "root",
@@ -20,7 +20,7 @@ cleatry:
         myDataBase.commit()
 
     print("DataBase 'alx_book_store' created successfully")
-except Error as e:
+except mysql.connection.Error as e:
     print(f"Error while connecting to MySQL: {e}")
 
 
